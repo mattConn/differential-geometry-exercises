@@ -1,0 +1,142 @@
+\title{Chapter 2, Section 2. Exercises 1, 4-6}
+\author{
+	MTH 594, Prof. Mikael Vejdemo-Johansson \\
+	Differential Geometry Independent Study \\
+	\\
+	Matthew Connelly \\
+}
+\date{\today}
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[top=.5in, bottom=.75in, left=1in, right=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 2.2.4}
+[Part 1]\\
+Let $k$ be the signed curvature of a plane curve $C$ expressed in terms of  its arc-length. Show that, if $C_a$ is the image of $C$ under the dilation of $\textbf{v} \rightarrow a\textbf{v}$ of the plane (where $a$ is a non-zero constant), the signed curvature of $C_a$ in terms of \textit{its} arc-length $s$ is $\frac{1}{a}k(\frac{s}{a})$.\\
+
+[Part 2]\\
+A heavy chain suspended at its ends hanging loosely takes the form of a plane curve $C$. Show that, if $s$ is the arc-length of $C$ measured from its lowest point, $\phi$ the angle between the tangent of $C$ and the horizontal, and $T$ the tension in the chain, then
+$$ Tcos\phi = \lambda \ , \ Tsin\phi = \mu s $$
+where $\lambda$, $\mu$ are non-zero constants (we assume that the chain has constant mass per unit length). Show that the signed curvature of $C$ is 
+$$ k_s = \frac{1}{a}\left(1+\frac{s^2}{a^2}\right)^{-1}$$
+where $a=\lambda/\mu$, and deduce that $C$ can be obtained from the catenary in Example 2.2.4 by applying a dilation and an isometry of the plane.
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+[Part 1]\\
+Showing that the signed curvature of $C_a$ is $\frac{1}{a}k(\frac{s}{a})$.\\
+\\
+First, relating the arc-length of $C$ to that of $C_a$:\\
+\\
+$C = (x, \ y) \ \hspace{1cm}\  C_a = (ax, \ ay)$\\
+$k$ is the signed curvature of $C$ in respect to its arc-length.\\
+\\
+Let $s_c$ be the arc-length of $C$, given $s$ is the arc-length of $C_a$. \\
+$\therefore$ \  $s = a \ s_c$ \hspace{1cm}\textrm{{\footnotesize $C_a$'s arc-length $=$ $C$'s arc-length $\cdot$ a}}\\
+\\
+Proof: \\
+\\
+$s_c = \int_0^t \parallel C' \parallel dt$ \hspace{2cm}\textrm{{\footnotesize $C$'s arc-length}}\\
+$s_c = \int_0^t \sqrt{(x')^2 + (y')^2} \ dt$ \\
+\\
+\\
+$s = \int_0^t \parallel C_a' \parallel dt$ \hspace{2cm}\textrm{{\footnotesize $C_a$'s arc-length}}\\
+\\
+$s = \int_0^t \sqrt{(ax')^2 + (ay')^2} \ dt$ \\
+\\
+$s = \int_0^t \sqrt{a^2[\ (x')^2 + (y')^2  \ ]} \ dt$ \\
+\\
+$s = \int_0^t \sqrt{a^2}\sqrt{ (x')^2 + (y')^2  } \ dt$ \\
+\\
+$s = \int_0^t a \sqrt{ (x')^2 + (y')^2  } \ dt$ \\
+\\
+$s = a\int_0^t \sqrt{ (x')^2 + (y')^2  } \ dt$ \hspace{1cm}\textrm{{\footnotesize $a$ is constant; commuted outside of integral expression}}\\
+$s = a \ s_c$ \\
+
+Lastly, relating the curvature of $C$ to that of $C_a$:\\
+$$k = n_sk_s \hspace{1cm}\textrm{{\footnotesize $C$'s signed curvature = unit normal $\cdot$ tangent's rate of turning}}$$\\
+\footnotesize{$C$'s rate of turning $k_s = \dot\phi$ \ :}
+\normalsize
+$$\phi = tan^{-1}\frac{y'}{x'} \hspace{1cm}\textrm{{\footnotesize Angle between $C$'s tangent and the horizontal}}$$\\
+$$\dot\phi = \frac{d\phi}{ds} = \frac{1}{1-(\frac{y'}{x'})^2} \cdot \frac{x'y'' - x''y'}{(x')^2} = k \hspace{1cm}\textrm{\footnotesize{$C$'s tangent's rate of turning}}$$\\
+\\
+{\footnotesize $C_a$'s rate of turning $\dot\phi_a$ \ :}
+$$\phi_a = tan^{-1}\frac{ay'}{ax'} = tan^{-1}\frac{y'}{x'} = \phi \hspace{1cm}\textrm{\footnotesize{Angle between $C_a$'s tangent and the horizontal}}$$\\
+$$\therefore \hspace{1cm} \dot\phi_a = \dot\phi = k_s \hspace{1cm}\textrm{\footnotesize{$C$'s rate of turning = $C_a$'s rate of turning}}$$
+\\
+\\
+\normalsize
+To relate all of this to $\frac{1}{a}k(\frac{s}{a})$:\\
+\\
+Let $n_s^a = (-a \ sin\phi, \ a\ cos\phi)$ be $C_a$'s unit normal; a $\frac{\pi}{2}$ rotation of $C_a$'s tangent $\bold{t}$.\\
+$n_s$ is $C$'s unit normal.\\
+\\
+$ k(s_c) = k\left( \frac{s}{a} \right) \hspace{1cm}\textrm{{\footnotesize Because $s$ = $a \cdot s_c$ and $C$ and $C_a$ have the same turning rate}} $\\
+
+$n_s \cdot k_s = n_s^a \cdot k_s \hspace{1cm}\textrm{{\footnotesize Expansion of $k$ at $s_c$ and $\frac{s}{a}$}}$\\
+
+$ (-sin\phi, \ cos\phi) \cdot \dot\phi = (-a \ sin\phi, \ a \ cos\phi) \cdot \dot\phi \hspace{1cm}\textrm{{\footnotesize Further expansion}}$\\
+
+$ (-sin\phi, \ cos\phi) \cdot \dot\phi \cdot \frac{1}{a} = (-sin\phi,  \ cos\phi) \cdot \dot\phi \hspace{1cm}\textrm{{\footnotesize Division by constant of dilation}}$\\
+
+$ k(s_c)\cdot \frac{1}{a} = k\left( \frac{s}{a} \right) \cdot \frac{1}{a}\hspace{1cm}\textrm{{\footnotesize Simplification}} $\\
+
+\vspace{1cm}
+\normalsize
+[Part 2]\\
+
+Show:\\
+$$ Tcos\phi = \lambda \ , \ Tsin\phi = \mu s $$\\
+Where $\lambda, \mu$ are non-zero constants.\\
+\\
+Curve $C$ is described as a heavy chain with tension $T$; a catenary.\\
+$\therefore  \ C = (t, \ cosht), \ C' = (1, \ sinht)$\\
+\\
+Unit tangent vector: $\bold{t} = (cos\phi, \ sin\phi)$
+\\
+Arc-length $s = sinht$, because $s = \int_0^t\sqrt{1+cosh^2t} = sinht$  \ for a catenary.\\
+$$C' = (1, \ sinht)$$
+$$C' = \bold{t} \hspace{1cm}\textrm{{\footnotesize Relating $C'$ to arc-length of $C$}}$$
+$$TC' = T\bold{t} \hspace{1cm}\textrm{{\footnotesize Scaling by constant of tension}}$$
+$$TC' = (Tcos\phi, \ Tsin\phi) \hspace{1cm}\textrm{{\footnotesize Expansion of $T\bold{t}$}}$$
+$$\therefore \ TC' = (\lambda, \ \mu s) \hspace{1cm}\textrm{{\footnotesize Expansion of $T\bold{t}$}}$$
+\\
+\\
+Also show:
+$$ k_s = \frac{1}{a}\left(1+\frac{s^2}{a^2}\right)^{-1}$$
+The signed curvature of $C$ is $k_s$.
+\\
+\\
+Given: $a = \frac{\lambda}{\mu}$\\
+From earlier definitions of $\lambda$, $\mu$:\\
+$$\mu = \frac{Tsin\phi}{s}$$
+$$ \therefore \ a = \frac{Tcos\phi}{Tsin\phi} \cdot s $$
+Which can be simplified:
+$$ a = \frac{cos\phi}{sin\phi} \cdot s \hspace{1cm}\textrm{{\footnotesize Cancellation of $T$}}$$
+$$ a = \frac{1}{tan\phi} \cdot s $$
+$$ a = \frac{1}{tan\phi} \cdot sinh \hspace{1cm}\textrm{{\footnotesize Expansion of arc-length $s$}}$$
+$$ \therefore \ a = \frac{sinh}{tan\phi} $$
+\\
+However,\\
+$ tan\phi = sinh $, making $a = \frac{\lambda}{\mu} = 1$.\\
+
+Justification:\\
+$tan\phi = \frac{y'}{x'} \hspace{1cm}\textrm{{\footnotesize tan of angle between $\bold{t}$ and $x$-axis }} $\\
+$tan\phi = sinh \hspace{1cm}\textrm{{\footnotesize}} $\\
+
+Now expanding $a$ and $s$ in $k_s$:
+$$ k_s = \frac{1}{\left(1+sinh^2t\right)}$$
+
+\end{document}
+This is never printed

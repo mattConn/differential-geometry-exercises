@@ -1,0 +1,45 @@
+\title{Chapter 2, Section 2. Exercises 1, 4-6}
+\author{
+	MTH 594, Prof. Mikael Vejdemo-Johansson \\
+	Differential Geometry Independent Study \\
+	\\
+	Matthew Connelly \\
+}
+\date{\today}
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[top=.5in, bottom=.75in, left=1in, right=1in]{geometry}
+
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 2.2.1}
+Show that, if $\gamma$ is a unit-speed plane curve,
+$$ \dot n_s \ = \ -k_s \textbf{t}$$ 
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+Knowing the unit normal and its derivative: \\
+$ n_s = (-sin\phi, \ cos\phi)$ \ , \ $\dot n_s = \dot \phi (-cos\phi, \ -sin\phi)$ \\
+\\
+And unit tangent, which can be signed:\\
+$\textbf{t} = (cos\phi, \ sin\phi) $ \ $\Rightarrow$ \ $-\textbf{t} = (-cos\phi, \ -sin\phi) $
+\\
+\\
+
+And knowing that signed curvature $k_s = \dot \phi $ \\
+
+$  \dot n_s = -k_s\textbf{t} $ can be expanded as such: \\
+\\
+$  \dot n_s \ = \ -\textbf{t}k_s \textrm{\hspace{3cm} \footnotesize Commuting \textbf{t} to front of expression }$ \\
+$  \dot n_s \ = \ -(cos\phi, \ sin\phi)k_s\textrm{\hspace{3cm} \footnotesize Expanding \textbf{t} }$ \\
+$  \dot n_s \ = \ (-cos\phi, \ -sin\phi)k_s\textrm{\hspace{3cm} \footnotesize Signing \textbf{t} }$ \\
+$  \dot n_s \ = \ (-cos\phi, \ -sin\phi)\dot\phi\textrm{\hspace{3cm} \footnotesize Expanding $k_s$ }$ \\
+
+\end{document}
+This is never printed
