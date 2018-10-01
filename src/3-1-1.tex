@@ -75,22 +75,47 @@ This should prove that when $|a|>1$, $\gamma$ cannot be a simple closed curve.\\
 \noindent
 \underline{$\gamma$'s complement to disjoint sets $Int(\gamma)$ and $Ext(\gamma)$:}\\\\
 \indent
-When $|a|>1$, $\gamma$ has a self-intersection, and therefore two sets of $Int(\gamma)$, one of which is the subset of the other, as well as a single $Ext(\gamma)$ set.
+When $|a|>1$, $\gamma$ has a self-intersection, and therefore two sets of $Int(\gamma)$, as well as a single $Ext(\gamma)$ set; these sets are disjoint and complement $\gamma$ as the union of $\sim\gamma$.
 
 \begin{figure}[h!]
   \centering
       \begin{subfigure}[b]{0.6\linewidth}
     \includegraphics[width=\linewidth]{./assets/3-1-1/limacon-int-ext.png}
-    \caption*{$Int_2$ is a subset of $Int_1$.}
+    \caption*{$Int_2$ is disjoint from $Int_1$, which is disjoint from $Ext$.}
   \end{subfigure}
   \end{figure}
   
-  We can then classify these sets as follows, starting from the inside of $\gamma$:\\\\
+  We can then classify these sets as follows, starting from the inside of $\gamma$, using $t_0$ and $t_1$ from the earlier proof of self-intersection:\\\\
   $$
-  Int_2(\gamma) \ = \ \lbrace  \ (x,y) \in \mathbb{R}^2 \ \vert \ (x,y) < \gamma(t) \in [\gamma(t_0),\gamma(t_1)] \ \rbrace
+\forall (x,y) \in \mathbb{R}^2,
   $$
- $$
-  Int_1(\gamma) \ = \ \lbrace  \ (x,y) \in \mathbb{R}^2 \ \vert \ \gamma(t) \in [\gamma(t_0),\gamma(t_1)]<  (x,y) < \gamma(t) \in [\gamma(0),\gamma(t_0)] \cup [\gamma(t_1),\gamma(2\pi)] \ \rbrace
   $$
+  Int_2(\gamma) = (x,y) < [\gamma(t_0),\gamma(t_1)]
+  $$
+  $$
+  Int_1(\gamma) = [\gamma(t_0),\gamma(t_1)] < (x,y) < [\gamma(0),\gamma(t_0)] \cup [\gamma(t_1),\gamma(2\pi)]
+  $$
+    $$
+  Ext(\gamma) = [\gamma(0),\gamma(2\pi)] < (x,y)
+  $$
+  \clearpage
+These sets can be written in the following inequality:
+$$
+Int_2(\gamma) < Int_1(\gamma) < Ext(\gamma)
+$$
+and summarized as the following equation:
+$$
+\sim\gamma=Int_2(\gamma) \cup Int_1(\gamma) \cup Ext(\gamma)
+$$
+
+\noindent
+\underline{When $|a| = 1$:}\\\\
+\indent
+We will officially have a limaçon when $|a| = 1$, which means that\\
+$$
+\gamma(t_0) \ = \ \gamma(t_1)
+$$
+and $t_0 = t_1$; there is no self-intersection. The point $\gamma(t_n)$ will be the cusp singularity of the cardioid where our self-intersection would be on a cardioid. This curve will be simple and closed.\\
+  
 \end{document}
 This is never printed
