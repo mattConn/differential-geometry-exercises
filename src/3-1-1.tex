@@ -48,15 +48,49 @@ What happens if $a = \pm1$?
  
   \caption*{A limaçon (a) will degrade to a cardioid (b).}
 \end{figure}
-
+\clearpage
 When $|a|>1$, $\gamma$ will have a self intersection. By definition, a simple closed curve is not to have any self-intersections.\\
 
-Proof of self-intersection:\\
-For some $t_0$ and $t_1$, $\gamma$ will have the same position if $\gamma$ has a self-intersection. Meaning,
+\noindent
+\underline{Proof of self-intersection when $|a|>1$:}\\\\
+\indent
+
+For some $t_0, \ t_1 \in [0,T)$, where $\gamma$ is $T$-periodic, $\gamma$ will have the same position twice if $\gamma$ has a self-intersection. Meaning,
 $$
 \gamma(t_0) \ = \ \gamma(t_1)
 $$
-but $t_0 \neq t_1$.
+but $t_0 \neq t_1$.\\
 
+Solving $\gamma(t_0) = \gamma(t_1)$  for $t_1$ and $t_0$, we will arrive at
+$$
+t_0 = cos^{-1}\left(-\frac{1}{a}\right)
+$$
+$$
+t_1 = 2\pi - t_0
+$$
+
+At $t_0$ and $t_1$, our position will be at the self-intersection and potential cusp of the curve if it were a cardioid; meaning, when $|a| = 1$.\\
+This should prove that when $|a|>1$, $\gamma$ cannot be a simple closed curve.\\
+
+\noindent
+\underline{$\gamma$'s complement to disjoint sets $Int(\gamma)$ and $Ext(\gamma)$:}\\\\
+\indent
+When $|a|>1$, $\gamma$ has a self-intersection, and therefore two sets of $Int(\gamma)$, one of which is the subset of the other, as well as a single $Ext(\gamma)$ set.
+
+\begin{figure}[h!]
+  \centering
+      \begin{subfigure}[b]{0.6\linewidth}
+    \includegraphics[width=\linewidth]{./assets/3-1-1/limacon-int-ext.png}
+    \caption*{$Int_2$ is a subset of $Int_1$.}
+  \end{subfigure}
+  \end{figure}
+  
+  We can then classify these sets as follows, starting from the inside of $\gamma$:\\\\
+  $$
+  Int_2(\gamma) \ = \ \lbrace  \ (x,y) \in \mathbb{R}^2 \ \vert \ (x,y) < \gamma(t) \in [\gamma(t_0),\gamma(t_1)] \ \rbrace
+  $$
+ $$
+  Int_1(\gamma) \ = \ \lbrace  \ (x,y) \in \mathbb{R}^2 \ \vert \ \gamma(t) \in [\gamma(t_0),\gamma(t_1)]<  (x,y) < \gamma(t) \in [\gamma(0),\gamma(t_0)] \cup [\gamma(t_1),\gamma(2\pi)] \ \rbrace
+  $$
 \end{document}
 This is never printed
