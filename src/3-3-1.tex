@@ -40,7 +40,7 @@ $\gamma(t) = (p \ cost, q \ sint)$ is our ellipse.
 Our ellipse is convex if a straight line segment joining any two points of $Int(\gamma)$ is contained entirely within $Int(\gamma)$.\\
 
 \indent
-Because our ellipse is symmetrical about the $x$-axis, if it is convex above the $x$-axis, then it should also be convex below; meaning, there should be no surprises after $t = \pi$ (half of $\gamma$'s period).
+Because the ellipse is symmetrical about the $x$-axis, if it is convex above the $x$-axis, then it should also be convex below; meaning, there should be no surprises after $t = \pi$ (half of $\gamma$'s period).
 
 \clearpage
 We can then check $Int(\gamma)$ using a chord inscribed in the ellipse, between two diametrically opposed points:\\
@@ -81,13 +81,14 @@ The distance between $V$ and $W$ can be written as the following function:\\
 $$
 ||\overline{VW}|| = D(t) = ( \ t, q \ (sin(-t) - sint) \ )
 $$
-Because of $\gamma$'s symmetry, we only need to evaluate $D(t)$ over $[0, \pi]$.
+Because of $\gamma$'s symmetry, we only need to evaluate $D(t)$ over $[0, \pi]$, which will look like the following:
 \begin{figure}[h!]
   \centering
       \begin{subfigure}[b]{0.7\linewidth}
     \includegraphics[width=\linewidth]{./assets/3-3-1/ellipse-chord-distance.png}
   \end{subfigure}
   \end{figure}
-
+  \\
+There is a singular point of extrema, which will show as a zero for $D'$.
 \end{document}
 This is never printed
