@@ -1,0 +1,63 @@
+\title{Chapter 3, Section 3. Exercises 1, 2 and 3}
+\author{
+	MTH 594, Prof. Mikael Vejdemo-Johansson \\
+	Differential Geometry Independent Study \\
+	\\
+	Matthew Connelly \\
+}
+\date{\today}
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[top=.5in, bottom=.75in, left=1in, right=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 3.3.1}
+
+Show that the ellipse in Example 3.1.2 is convex.
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+$\gamma(t) = (p \ cost, q \ sint)$ is our ellipse.
+
+\begin{figure}[h!]
+  \centering
+      \begin{subfigure}[b]{0.5\linewidth}
+    \includegraphics[width=\linewidth]{./assets/3-3-1/ellipse.png}
+  \end{subfigure}
+  \end{figure}
+  
+Our ellipse is convex if a straight line segment joining any two points of $Int(\gamma)$ is contained entirely within $Int(\gamma)$.\\
+
+\indent
+Because our ellipse is symmetrical about the $x$-axis, if it is convex above the $x$-axis, then it should also be convex below; meaning, there should be no surprises after $t = \pi$ (half of $\gamma$'s period).
+
+\clearpage
+We can then check $Int(\gamma)$ using a chord inscribed in the ellipse, between two diametrically opposed points:\\
+\begin{figure}[h!]
+  \centering
+      \begin{subfigure}[b]{0.5\linewidth}
+    \includegraphics[width=\linewidth]{./assets/3-3-1/ellipse-vertical-chord.png}
+  \end{subfigure}
+  \end{figure}
+
+This chord can be written as:
+$$
+\overline{VW} = \gamma(-t) - \gamma(t)
+$$
+$$
+\overline{VW} = y(-t) - y(t)
+$$
+
+\end{document}
+This is never printed
