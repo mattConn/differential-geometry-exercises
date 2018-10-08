@@ -1,0 +1,65 @@
+\title{Chapter 4, Section 1. Exercises 1, 2, 3 and 5}
+\author{
+	MTH 594, Prof. Mikael Vejdemo-Johansson \\
+	Differential Geometry Independent Study \\
+	\\
+	Matthew Connelly \\
+}
+\date{\today}
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[top=.5in, bottom=.75in, left=1in, right=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 4.1.1}
+
+Show that any open disc in the $xy$-plane is a surface.
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+Let an open disc in the $xy$-plane be defined as
+$$
+D = \lbrace (x,y) \in \mathbb{R}^2  \ \vert  \ \Vert (x,y)-a \Vert < r \rbrace
+$$
+where $a$ is the disc's center and $r$ is its radius $> 0$.\\\\
+Then, let there be an open ball in $\mathbb{R}^3$ defined similarly as 
+$$
+W = \lbrace (x,y,z) \in \mathbb{R}^3  \ \vert  \ \Vert (x,y,z)-a \Vert < r \rbrace
+$$
+with $a$ and $r$ representing its own center and radius.\\
+\indent
+By definition, $D \subset W$, which implies $D \subset \mathbb{R}^3$; this will eliminate the need to define a separate open disc in $\mathbb{R}^2$ for the following statement on homeomorphism.\\
+\\
+We can then see that
+$$
+D \cap W = D
+$$	
+which means that $D \cap W$ is homeomorphic to $D$.\\\\
+Or, in more formal notation:
+$$
+\sigma : D \rightarrow D \cap W
+$$
+
+and
+
+$$
+\sigma^{-1} : D \cap W \rightarrow D
+$$
+
+This second statement inverting $\sigma$ is especially important; mapping one set to its intersection with another set is trivial, but the inversion of that mapping may not yield a continuous result with preservation of range. Here, however, we are successful in mapping a surface to an open disc and vice versa.\\
+\indent
+It should also be noted that the atlas of $D$ is a single surface patch, reinforcing the notion that the intersection of $D$ and some $\mathbb{R}^3$ set will be homeomorphic to itself ($D$) for all points in $\mathbb{R}^2$ that are also in $D$.
+\end{document}
+This is never printed
