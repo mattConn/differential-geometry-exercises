@@ -33,7 +33,39 @@ defined on the open set $U = \lbrace (u,v) \in \mathbb{R}^2 \ \vert \ u^2 + v^2 
 \hrule
 \vspace{1cm}
 
+\underline{Surface patch definition for $S^2$:}\\
 
+The six surface patches for $S^2$ are
+$$
+x = \pm\sqrt{1-z^2-y^2}
+$$
+$$
+y = \pm\sqrt{1-z^2-x^2}
+$$
+$$
+z = \pm\sqrt{1-y^2-x^2}
+$$
+which can be parametrized, as a stated in the problem, as
+$$
+\sigma^{x}_{\pm}(u,v) = (\pm \sqrt{1-u^2-v^2}, u ,v)
+$$
+$$
+\sigma^{y}_{\pm}(u,v) = (u, \pm \sqrt{1-u^2-v^2} ,v)
+$$
+$$
+\sigma^{z}_{\pm}(u,v) = (u ,v, \pm \sqrt{1-u^2-v^2})
+$$
+\\
+\indent
+Then, for the open set $U$ defined in the problem as $u^2 + v^2 < 1$, which also looks like $Int(x^2+y^2 = 1)$,
+
+$$
+\sigma : U \rightarrow S^2.
+$$
+\\
+\underline{Proof that $S^2$ is a surface:}\\
+\indent
+For any of the six patches , say, $x = +\sqrt{1-z^2-y^2}$, there will be a point $p \in U$ that can be mapped to $S^2$ by $\sigma^{x}_{+}$. The union of patches $\sigma^{x}_{+}$ and $\sigma^{x}_{-}$, will then make a surface, as will the union of any other pair of homeomorphisms of opposing signs from the six patches.
 
 \end{document}
 This is never printed
