@@ -1,0 +1,60 @@
+\title{Chapter 4, Section 1. Exercises 1, 2, 3 and 5}
+\author{
+	MTH 594, Prof. Mikael Vejdemo-Johansson \\
+	Differential Geometry Independent Study \\
+	\\
+	Matthew Connelly \\
+}
+\date{\today}
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[top=.5in, bottom=.75in, left=1in, right=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 4.1.5}
+Show that every open subset of a surface is a surface.
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+Let $S \in \mathbb{R}^3$ be a surface.\\
+Let $U \in \mathbb{R}^2$ and $W \in \mathbb{R}^3$ be open sets in their respective spaces.\\
+\\
+\indent
+Then, $S \cap W$ will be a surface patch (and an open subset of surface $S$) if $U$ can be mapped to $S \cap W$ smoothly and bijectively.\\
+\indent
+$\sigma$ will be this mapping function:
+$$
+\sigma: U \rightarrow S \cap W
+$$
+
+Then, let there be a group of subsets, defined as
+$$ S_2 \subseteq S \cap W$$
+$$ W_2 \subseteq W$$
+$$ U_2 \subseteq U$$
+and, a smooth, bijective mapping function analogous to $\sigma$:
+$$
+\sigma_2: U_2 \rightarrow S_2
+$$
+
+The following comparison can now be made:
+
+$$
+S_2 \cap W_2 = \left( S \cap W \right) \cap W_2
+$$
+
+Which means that the open subset of surface $S$ is a surface because it can be mapped to a surface patch homeomorphically. This general definition can then be applied to all surface subsets.
+
+\end{document}
+This is never printed
