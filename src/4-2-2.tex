@@ -50,9 +50,26 @@ These six patches (four of which could be depicted as above) are essentially nes
 
 \underline{Verifying regularity of $\sigma$:}\\\\
 \indent
-We will work with a single surface patch $\sigma^x_+$ and trust that its regularity will imply the regularity of the remaining five patches, considering their near-identical definitions.\\\\
+We will work with a single surface patch $\sigma^x_+$ and trust that its regularity will imply the regularity of the remaining five patches, considering their near-identical definitions.\\
 \indent
-By definition, a surface patch is regular if it is smooth (belonging to $C^n$) and the vectors are linearly independent in the $\mathbb{R}^2$ set to which it is homeomorphic.
+We will also take the liberty of taking $\sigma$ to mean $\sigma^x_+$  from here on out for ease of notation.\\\\
+\indent
+By definition, a surface patch is regular if it is smooth (belonging to $C^n$) and the vectors are linearly independent in the $\mathbb{R}^2$ set to which it is homeomorphic.\\
+\indent
+Partial differentiation will show that  $\sigma \in \mathbb{R}^2 \in C^n$, and is therefore smooth:
+$$
+\sigma_u = \left(-\frac{u}{\sqrt{1-u^2-v^2}}, 1 ,0 \right)
+$$
 
+$$
+\sigma_v = \left(-\frac{v}{\sqrt{1-u^2-v^2}}, 0 ,1 \right)
+$$
+\indent
+$U$ can then be defined as:
+$$
+U = \lbrace u,v \in \mathbb{R}^2 \ | \ u^2 + v^2 < 1 \rbrace
+$$
+\indent
+Letting vectors $u, v \in U$ be orthogonal to each other, and therefore linearly independent, satisfies the final condition that make $\sigma$ regular.
 \end{document}
 This is never printed
