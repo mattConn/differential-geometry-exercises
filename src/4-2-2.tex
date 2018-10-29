@@ -44,7 +44,8 @@ All six patches can be visualized as the following four domes (or even the just 
   \end{subfigure}
   \end{figure}
   \\
-These six patches (four of which could be depicted as above) are essentially nested, creating an overlap between all six and covering the open bounds of each other (covering the edge made by the "slice"), making an atlas for the entirety of $S^2$.
+	\indent
+	These six patches (four of which could be depicted as above) are essentially nested, creating an overlap between all six and covering the open bounds of each other (covering the edge made by the "slice"), making an atlas for the entirety of $S^2$.
 
 \clearpage
 
@@ -56,7 +57,7 @@ We will also take the liberty of taking $\sigma$ to mean $\sigma^x_+$  from here
 \indent
 By definition, a surface patch is regular if it is smooth (belonging to $C^n$) and the vectors are linearly independent in the $\mathbb{R}^2$ set to which it is homeomorphic.\\
 \indent
-Partial differentiation will show that  $\sigma \in \mathbb{R}^2 \in C^n$, and is therefore smooth:
+Partial differentiation will show that  $\sigma \in C^n$, and is therefore smooth:
 $$
 \sigma_u = \left(-\frac{u}{\sqrt{1-u^2-v^2}}, 1 ,0 \right)
 $$
@@ -70,6 +71,54 @@ $$
 U = \lbrace u,v \in \mathbb{R}^2 \ | \ u^2 + v^2 < 1 \rbrace
 $$
 \indent
-Letting vectors $u, v \in U$ be orthogonal to each other, and therefore linearly independent, satisfies the final condition that make $\sigma$ regular.
+Letting vectors $u, v \in U$ be orthogonal to each other, and therefore linearly independent, satisfies the final condition that make $\sigma$ regular.\\
+
+\underline{Calculating the transition maps between $\sigma$ patches:}\\\\
+\indent
+
+Just as we used a single patch for verifying regularity earlier, we need only work with two patches of $S^2$'s atlas to calculate a transition map between any two of its patches, on account of its symmetry.\\
+
+Let us take the $+x$ and $+z$ patches, then. These patches will be parametrized as the following homeomorphisms:
+
+$$
+\sigma^{x}_{+}(u,v) = (\sqrt{1-u^2-v^2}, u ,v)
+$$
+$$
+\sigma^{z}_{+}(u,v) = (u ,v, \sqrt{1-u^2-v^2})
+$$
+
+Each which has the following mappings:
+
+$$
+\sigma^{x}_{+} : U \rightarrow S \cap W
+$$
+$$
+\sigma^{z}_{+} : \widetilde{U} \rightarrow S \cap \widetilde{W}
+$$
+
+\clearpage
+
+We can picture $+x$ and $+z$ as the diagram below:
+
+\begin{figure}[h!]
+  \centering
+      \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{./assets/4-2-2/s2-patches-intersection.png}
+  \end{subfigure}
+  \end{figure}
+	\indent
+
+The overlap (intersection) of the patches can be parametrized as $\sigma^{x}_{+}$ with $v \in [0,2\pi]$ or $\sigma^{z}_{+}$.
+$$
+\lbrace \sigma^{x}_{+}  \ \forall \ (u, v) \in U  \ | \ -2\pi \leq u \leq 2\pi  \ \textrm{and} \ 0 \leq v \leq 2\pi  \rbrace
+$$
+\indent
+or
+$$
+\lbrace \sigma^{z}_{+}  \ \forall \ (\tilde u, \tilde v) \in \widetilde{U}  \ | \  0 \leq \tilde u \leq 2\pi  \ \textrm{and} \ -2\pi \leq \tilde v \leq 2\pi \rbrace
+$$
+
+
+
 \end{document}
 This is never printed
