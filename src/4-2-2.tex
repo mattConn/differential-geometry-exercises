@@ -22,7 +22,7 @@
 \maketitle
 
 \section*{Exercise 4.2.2}
-Verify that the the six surface patches for $S^2$ in Exercise 4.1.2 are regular. Calculate the transition maps between them and verify that these maps are smooth.
+Verify that the six surface patches for $S^2$ in Exercise 4.1.2 are regular. Calculate the transition maps between them and verify that these maps are smooth.
 
 \vspace{1cm}
 \hrule
@@ -71,9 +71,9 @@ $$
 U = \lbrace u,v \in \mathbb{R}^2 \ | \ u^2 + v^2 < 1 \rbrace
 $$
 \indent
-Letting vectors $u, v \in U$ be orthogonal to each other, and therefore linearly independent, satisfies the final condition that make $\sigma$ regular.\\
+Letting vectors $u, v \in U$ be orthogonal to each other, and therefore linearly independent, satisfies the final condition that make $\sigma$ regular.\\\\
 
-\underline{Calculating the transition maps between $\sigma$ patches:}\\\\
+\underline{Calculating the transition maps between $\sigma$ patches:}\\
 \indent
 
 Just as we used a single patch for verifying regularity earlier, we need only work with two patches of $S^2$'s atlas to calculate a transition map between any two of its patches, on account of its symmetry.\\
@@ -87,7 +87,7 @@ $$
 \sigma^{z}_{+}(u,v) = (u ,v, \sqrt{1-u^2-v^2})
 $$
 
-Each which has the following mappings:
+Each of which have the following mappings:
 
 $$
 \sigma^{x}_{+} : U \rightarrow S \cap W
@@ -98,7 +98,7 @@ $$
 
 \clearpage
 
-We can picture $+x$ and $+z$ as the diagram below:
+We can visualize $+x$ and $+z$ as the diagram below:
 
 \begin{figure}[h!]
   \centering
@@ -108,17 +108,45 @@ We can picture $+x$ and $+z$ as the diagram below:
   \end{figure}
 	\indent
 
-The overlap (intersection) of the patches can be parametrized as $\sigma^{x}_{+}$ with $v \in [0,2\pi]$ or $\sigma^{z}_{+}$.
+The overlap (intersection) of the patches can be written as
 $$
-\lbrace \sigma^{x}_{+}  \ \forall \ (u, v) \in U  \ | \ -2\pi \leq u \leq 2\pi  \ \textrm{and} \ 0 \leq v \leq 2\pi  \rbrace
+\lbrace \sigma^{x}_{+}(u,v)  \ \forall \ (u, v) \in U  \ | \ -2\pi \leq u \leq 2\pi  \ \textrm{and} \ 0 \leq v \leq 2\pi  \rbrace
 $$
 \indent
 or
 $$
-\lbrace \sigma^{z}_{+}  \ \forall \ (\tilde u, \tilde v) \in \widetilde{U}  \ | \  0 \leq \tilde u \leq 2\pi  \ \textrm{and} \ -2\pi \leq \tilde v \leq 2\pi \rbrace
+\lbrace \sigma^{z}_{+}(\tilde u, \tilde v)  \ \forall \ (\tilde u, \tilde v) \in \widetilde{U}  \ | \  0 \leq \tilde u \leq 2\pi  \ \textrm{and} \ -2\pi \leq \tilde v \leq 2\pi \rbrace,
 $$
 
+each which would be half of a dome (or a quarter of a sphere).\\
 
+\indent
+Then, for some $V \subset U$ and $\widetilde V \subset \widetilde U$,
+$$
+\sigma^{-1}_{x}(S \cap W \cap \widetilde W) = V
+$$
+
+\indent
+and
+
+$$
+\sigma^{-1}_{z}(S \cap W \cap \widetilde W) = \tilde V
+$$
+
+where $S \cap W \cap \widetilde W $ marks the overlap/intersection of the two surface patches.\\
+\indent
+$\therefore$, the transition map will be
+
+$$
+\sigma^{-1}_{x}( \ \sigma_{z}(\widetilde V)  \ ) = \sigma^{-1}_{x}(S \cap W \cap \widetilde W) = V
+$$
+
+which can be written as the following composition:
+$$
+\sigma^{-1}_{x} \circ \sigma_{z} : \widetilde V \rightarrow V
+$$
+
+which is smooth because, by definition of a surface patch, $\sigma^{-1}_{x}$ and $\sigma^{-1}_{z}$ are smooth.
 
 \end{document}
 This is never printed
