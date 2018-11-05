@@ -49,8 +49,15 @@ $$
 \sigma = (p \ \cos u \ \cos t, q \cos u \ \sin t, r \sin u)
 $$
 
-TODO
-Image of ellipsoid, rotating
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.5\linewidth}
+		\includegraphics[width=\linewidth]{./assets/4-2-4/sphere-rotational.png}
+	\end{subfigure}
+\end{figure}
+\indent
+
+\clearpage
 
 \ulind{Demonstrating smoothness via partial differentiation}
 If $\sigma$ is smooth, then $\sigma \in C^n$; it is differentiable continuously to order $n$. The first partial derivatives are:
@@ -65,9 +72,8 @@ $$
 Since $\sin $ and $\cos \in C^\infty$, it is then implied that $\sigma \in C^\infty$, making $\sigma$ smooth.\\
 
 \ulind{Showing that $\sigma$ is a surface via its atlas}
-To be a surface, $\sigma$ must have an atlas; we can begin by making patches of $\sigma$.\\
+To be a surface, $\sigma$ must have an atlas.\\
 
-\clearpage 
 Let the atlas of $\sigma$ consist of the patches $\sigma_U$ and $\sigma_{\widetilde U}$, which map $U$ and $\widetilde U$ to $S$:\\
 
 $$
@@ -80,15 +86,20 @@ $$
 where $U$ and $\widetilde U$ are defined as follows:
 
 $$
-U = \lbrace t, u \ | \ 0 < t < 2 \pi, -\frac{\pi}{4} < u < \frac{\pi}{4} \rbrace
+U = \lbrace t, u \ | \ 0 < t < 2 \pi, -\frac{\pi}{2} < u < \frac{\pi}{2} \rbrace
 $$
 
 $$
 \widetilde U = \lbrace t, u \ | \ 0 < t < \pi, 0 < u < 2 \pi \rbrace
 $$
 
-TODO
-Add images of patches here\\
-These patches may not be appropriate
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{./assets/4-2-4/sphere-atlas.png}
+	\end{subfigure}
+\end{figure}
+\indent
 
+Pictured above is this atlas of $S$. As $\sigma_u$ (in red) closes about the north and south poles of $S$ (not visible), $\sigma_{\tilde{u}}$ (in blue) closes like a shell.
 \end{document}
