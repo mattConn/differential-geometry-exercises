@@ -29,6 +29,17 @@
 ||#1||
 }
 
+\newcommand{\oneimg}[2]
+{
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[b]{#1\linewidth}
+\includegraphics[width=\linewidth]{#2}
+\end{subfigure}
+\end{figure}
+\indent
+}
+
 \begin{document}
 \maketitle
 
@@ -44,6 +55,20 @@ where $\lambda$ is a constant. Show that the cotangent of the angle that the sta
 \hrule
 \vspace{1cm}
 \noindent
+
+In $\sigma$, $v$ can be taken to represent the radius of the propeller of the plane (or just the length of a single blade, considering the length of propeller blades should be uniform).\\
+\indent
+$u$ will then be the angle the propeller is making with some horizontal ($x$-axis) and represent how many rotations the propeller has made in radians cumulatively.\\
+\indent
+Lastly, $\lambda$ will represent the distance the plane has traveled in the direction of $z$.\\
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[b]{0.4\linewidth}
+\includegraphics[width=\linewidth]{./assets/4-2-6/helicoid1.png}
+\end{subfigure}
+\end{figure}
+\indent
 
 \ulind{Finding $\sigma$'s unit normal}
 $\sigma$'s unit normal can be computed as follows:
