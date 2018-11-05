@@ -24,6 +24,10 @@
 \indent
 }
 
+\newcommand{\norm}[1]
+{
+||#1||
+}
 
 \begin{document}
 \maketitle
@@ -51,7 +55,7 @@ $$
 But first, its normal is:
 
 $$
-n = (-\lambda \sin u, \lambda \cos u, -v)
+\sigma_u \times \sigma_v = n = (-\lambda \sin u, \lambda \cos u, -v)
 $$
 
 And the norm of the normal is:
@@ -67,5 +71,80 @@ $\therefore$, the unit normal to $\sigma$ is:
 $$
 \hat{n} = \left(\frac{-\lambda \sin u}{\sqrt{\lambda^2+v^2}}, \frac{\lambda \cos u}{\sqrt{\lambda^2+v^2}}, \frac{-v}{\sqrt{\lambda^2+v^2}}\right)
 $$
+
+\clearpage
+
+\ulind{Relating the angle that $\hat{n}$ makes with the $z$-axis to its \emph{distance} from the $z$-axis:}
+
+To find the cotangent of the angle that $\hat{n}$ makes with the $z$-axis when $\hat{n}$ is at a point $p$, we'll need $\sin \theta$ and $\cos \theta$. We can find these values by dotting and crossing $\hat{n}$ with the standard unit vector $k = <0,0,1>$:
+
+$$
+k \cdot \hat{n} = \norm{k} \ \norm{\hat{n}}\cos \theta
+$$
+and
+$$
+\norm{k \times \hat{n}} = \norm{k} \ \norm{\hat{n}}\sin \theta.
+$$
+
+With $\norm{k}$ and $\norm{\hat{n}}$ both equal to $1$, we then arrive at the following results: 
+
+$$
+k \cdot \hat{n} = \cos \theta = -\frac{v}{\sqrt{\lambda^2+v^2}}
+$$
+and
+$$
+\norm{k \times \hat{n}} = \sin \theta  = \frac{\lambda}{\sqrt{\lambda^2+v^2}}.
+$$
+
+Compute the cotangent:
+
+$$
+\cot \theta = \frac{\cos \theta}{\sin \theta}
+$$
+$$
+ = -\frac{v}{\sqrt{\lambda^2+v^2}} \ \frac{\sqrt{\lambda^2+v^2}}{\lambda}
+$$
+$$
+= -\frac{v}{\lambda}
+$$
+
+To relate this value to the distance of $p$ from the $z$-axis, we first need to look at $p$ as a point at, say, $\sigma(x_0,y_0)$:
+$$
+p = \sigma(x_0,y_0) = (y_0 \cos x_0,y_0 \sin x_0,\lambda x_0)
+$$
+
+Because we are only interested in distance from the $z$-\emph{axis}, we can ignore the $k$-component of $\sigma(x_0,y_0)$ and treat it as a planar function:
+
+$$
+p = \sigma(x_0,y_0) = (y_0 \cos x_0,y_0 \sin x_0)
+$$
+
+Now to find the distance of $p$ to the $z$-axis (or to the origin in the $xy$-plane):
+
+$$
+\norm{p} = \sqrt{y_0^2 \cos^2x_0 + y_0^2 \sin^2 x_0}
+$$
+$$
+= \sqrt{y_0^2}
+$$
+$$
+= y_0
+$$
+
+\clearpage
+
+We can see that the distance from $p$ to the $z$-axis is equal to $y_0$ in this case. Knowing that $y_0 \in v$ as $\sigma(x_0,y_0) \in \sigma(u,v)$, looking at $\cot \theta$ again:
+
+$$
+-\frac{v}{\lambda}
+$$
+
+we could restate the above as:
+
+$$
+-\frac{y_0}{\lambda}
+$$
+
+which shows that the distance of $p$ from the $z$-axis directly affects $\cot \theta \ \forall \ x,y \in u,v$.
 
 \end{document}
