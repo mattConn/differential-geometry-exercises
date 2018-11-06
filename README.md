@@ -7,10 +7,10 @@ Exercises can be organized by which report they were completed for by switching 
 # List of Reports
 
 ## Report 1
-NOT TEXIFYED
+TO BE TEXIFIED
 
 ## Report 2
-NOT TEXIFYED
+TO BE TEXIFIED
 
 ## Report 3
 - 2-2-1
