@@ -58,6 +58,7 @@ $$
 
 \ulind{Solutions}
 (i):\\
+We are given $\sigma(u,v) = (u,v,u^2-v^2)$ and point $(1,1,0)$.\\
 The partial derivatives of $\sigma$ are
 $$
 \sigma_u = (1,0,2u), \ \sigma_v = (0,1,-2v). 
@@ -82,5 +83,34 @@ $$
 $$
 -2x+2y+z=0
 $$
+\\
+(ii):\\
+Same procedure as for (i).\\
+We are given $\sigma(r,\theta) = (r \cosh \theta, r \sinh \theta,r^2)$ and point $(1,0,1)$.\\
+The partial derivatives of $\sigma$ are
+$$
+\sigma_r(\cosh\theta, \sinh \theta,2r), \ \sigma_\theta = (r\sinh\theta,r\cosh\theta,0)
+$$
+From here, we'll solve for $r, \theta$:
+$$1 = r\cosh\theta$$
+$$0 = r\sinh\theta$$
+$$1 = r^2$$
+
+Solving the above yields $r = 1, \ \theta = 0$.\\
+
+
+Finding the normal:
+$$
+\sigma_r \times \sigma_\theta = (-2r^2\cosh\theta,2r^2\sinh\theta,r)
+$$
+Using found $r$ and $\theta$ values, the normal is $(-2,0,1)$.\\
+Our tangent plane is then
+$$
+-2(x-1)+0(y-0)+1(z-1) = 0
+$$
+$$
+-2x+z+1 = 0
+$$
+
 
 \end{document}
