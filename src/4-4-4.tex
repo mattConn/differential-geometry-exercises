@@ -1,0 +1,54 @@
+\title{Chapter 4, Section 4. Exercises 1, 2, and 4.}
+\author{
+	MTH 594, Prof. Mikael Vejdemo-Johansson \\
+	Differential Geometry Independent Study \\
+	\\
+	Matthew Connelly \\
+}
+\date{\today}
+
+
+
+\documentclass[12pt]{article}
+
+\usepackage[top=.5in, bottom=.75in, left=1in, right=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\newcommand{\ulind}[1]
+{
+\noindent
+\underline{#1}\\\\
+\indent
+}
+
+\newcommand{\R}
+{
+\mathbb{R}
+}
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 4.4.4}
+\indent
+Let $f: S_1 \rightarrow S_2$ be a local diffeomorphism and let $\gamma$ be a regular curve on $S_1$. Show that $f \circ \gamma$ is a regular curve on $S_2$.
+
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+\noindent
+
+$f$ maps a surface $S_1 \in \R^3$ to another surface $S_2 \in \R^3$. $f \circ \gamma$ can also be written as
+
+$$
+f( \gamma ) = S_2.
+$$
+\indent
+More explicitly, a local diffeomorphism will map all $p \in S_1$ to some $\tilde{p} \in S_2$.\\
+\indent
+Knowing that all $p \in \gamma$ will also be in $S_1$, $\gamma$ will always be mapped to $\tilde{\gamma} \in S_2$ inadvertently via $f$, so long as it is regular in $S_1$ (as in, never breaking).
+
+\end{document}
